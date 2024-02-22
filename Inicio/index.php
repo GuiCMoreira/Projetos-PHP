@@ -10,13 +10,13 @@
     <form>
       <label>Digite seu nome: </label>
       <input type="text" name="txtnome" value="" />
-      <button type="submit" value="Enviar"></button>
+      <button type="submit" value="Enviar">Enviar</button>
     </form>
 
-  <?php
-  $nome = "Abacate";
-  echo "Olá $nome";
-  ?>
+    <?php
+      $nome = "Abacate";
+      echo "Olá $nome";
+    ?>
 
   </body>
 </html>
