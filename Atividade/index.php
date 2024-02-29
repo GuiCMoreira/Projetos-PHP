@@ -22,6 +22,7 @@
             <input type="radio" name="op" value="2"> Subtração
             <input type="radio" name="op" value="3"> Divisão
             <input type="radio" name="op" value="4"> Multiplicação
+            <input type="radio" name="op" value="5"> Média
 
             <br><br>
 

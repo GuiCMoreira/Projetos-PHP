@@ -35,6 +35,10 @@ switch ($op) {
     echo "$n1 * $n2 = " . mult($n1, $n2);
   break;
       
+  case 5:
+    echo "Média entre $n1 e $n2 = " . media($n1, $n2);
+  break;
+      
   default:
   
   break;
