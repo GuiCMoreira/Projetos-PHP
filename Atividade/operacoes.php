@@ -36,7 +36,7 @@ switch ($op) {
   break;
       
   default:
-    echo"Insira uma operação válida!";
+  
   break;
 }
 
