@@ -10,9 +10,9 @@
 
   <?php
 
-  $n1 = filter_input(INPUT_GET, "n1", FILTER_SANITIZE_SPECIAL_CHARS);
-  $n2 = filter_input(INPUT_GET, "n2", FILTER_SANITIZE_SPECIAL_CHARS);
-  $op = filter_input(INPUT_GET, "op", FILTER_SANITIZE_SPECIAL_CHARS);
+  $n1 = filter_input(INPUT_GET, "n1", FILTER_SANITIZE_NUMBER_FLOAT);
+  $n2 = filter_input(INPUT_GET, "n2", FILTER_SANITIZE_NUMBER_FLOAT);
+  $op = filter_input(INPUT_GET, "op", FILTER_SANITIZE_NUMBER_FLOAT);
 
   if ($n1 == "" || $n2 == "" || $op == "") {
     header("location:index.php");
@@ -64,7 +64,10 @@ switch ($op) {
 
 <br><br>
 
-<a href="index.php"> Voltar </a>
+<form action="index.php">
+  <input type="submit" value="Voltar"><br><br>
+</form>
+
 
 </body>
 </html>
