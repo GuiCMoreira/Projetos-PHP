@@ -14,8 +14,18 @@
     </form>
 
     <?php
-      $nome = "Abacate";
+    
+      $nome = "Abacate<br><br>";
       echo "Olá $nome";
+
+      $nome_get = $_GET["txtnome"];
+      $nome_post = $_POST["txtnome"];
+      $nome_request = $_REQUEST["txtnome"];
+
+      echo "Imprimindo com GET: $nome_get<br>";
+      echo "Imprimindo com POST: $nome_post<br>";
+      echo "Imprimindo com REQUEST: $nome_request<br>";
+
     ?>
 
   </body>

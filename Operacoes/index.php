@@ -7,66 +7,30 @@
 </head>
 <body>
 
-<?php
+<main>
+        <form action="operacoes.php" method="get">
+        <h1>Operações</h1>
 
-  $n1 = 20;
-  $n2 = 10;
-  $op = 1;
-  $repeat = false;
+            <p>1 - Soma</p>
+            <p>2 - Subtração</p>
+            <p>3 - Divisão</p>
+            <p>4 - Multiplicação</p>
+            <p>5 - Média</p>
 
-  do {
-    switch ($op) {
-      case 1:
-        echo "A + B = " . soma($n1, $n2);
-        break;
-      
-      case 2:
-        echo "A - B = " . subtr($n1, $n2);
-        break;
-      
-      case 3:
-        echo "A / B = " . divi($n1, $n2);
-        break;
-      
-      case 4:
-        echo "A * B = " . mult($n1, $n2);
-        break;
-      
-      case 5:
-        echo "Média = " . media($n1, $n2);
-        break;
-      
-      case 6:
-        $repeat = false;
-        break;
-      
-      default:
-        echo"Insira uma operação válida!";
-        break;
-    }
-  } while ($repeat);
+            <label for="op">Escolha a operação</label>
+            <input type="number" name="op" value="<?=$op?>"><br><br>
 
-  function soma($n1, $n2){
-    return $n1 + $n2;
-  }
 
-  function subtr($n1, $n2){
-    return $n1 - $n2;
-  }
+            <label for="n1">Primeiro Número</label>
+            <input type="number" name="num1" value="<?=$n1?>">
 
-  function divi($n1, $n2){
-    return $n1 / $n2;
-  }
+            <label for="n2">Segundo Número</label>
+            <input type="number" name="num2" value="<?$n2?>">
+            
+            <input type="submit" value="Calcular"><br><br>
 
-  function mult($n1, $n2){
-    return $n1 * $n2;
-  }
-
-  function media($n1, $n2){
-    return ($n1 + $n2) / 2;
-  }
-
-?>
+        </form>
+</main>
 
 </body>
 </html>
