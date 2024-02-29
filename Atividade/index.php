@@ -17,11 +17,11 @@
             
             <br><br>
 
-            <label for="op">Escolha a operação: </label>
-            <input type="radio" name="op" value="1"> +
-            <input type="radio" name="op" value="2"> -
-            <input type="radio" name="op" value="3"> /
-            <input type="radio" name="op" value="4"> *
+            <label for="op">Operação: </label>
+            <input type="radio" name="op" value="1"> Soma
+            <input type="radio" name="op" value="2"> Subtração
+            <input type="radio" name="op" value="3"> Divisão
+            <input type="radio" name="op" value="4"> Multiplicação
 
             <br><br>
 
