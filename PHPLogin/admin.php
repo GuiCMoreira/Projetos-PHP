@@ -8,8 +8,8 @@
 </head>
 <body>
   <h1>Painel do Admin</h1>
-  <form action="index.php">
-  <input type="submit" value="Voltar">
+  <form action="sair.php">
+  <input type="submit" value="Sair">
   </form>
 </body>
 </html>
