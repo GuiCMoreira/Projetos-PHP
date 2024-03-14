@@ -26,12 +26,30 @@
     }
     
     if ($erro == true) {
-      echo "<span>Inválido</span>";
+      echo "<span>Campo vazio</span>";
     }
 
   ?>
 
   </form> <br><br>
+    
+  <form action="imprimir.php">
+    <input type="submit" value="Ver Nomes">
+  <?php
+
+    $erro = false;
+    $msg2 = filter_input(INPUT_GET, "msg2", FILTER_SANITIZE_SPECIAL_CHARS);
+
+    if ($msg2 != "") {
+      $erro = true;
+    }
+    
+    if ($erro == true) {
+      echo "<span>Não há nomes cadastrados</span>";
+    }
+
+  ?>
+  </form>
     
 </body>
 </html>
