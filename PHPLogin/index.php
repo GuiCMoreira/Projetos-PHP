@@ -1,4 +1,21 @@
 <!DOCTYPE html>
+
+<?php 
+if (isset($_COOKIE["cookie"])) {
+  if ($_COOKIE["cookie"] == "cookieUsuario") {
+    header("Location: usuario.php");
+    die();
+  }
+  elseif ($_COOKIE["cookie"] == "cookieAdmin") {
+    header("Location: admin.php");
+    die();
+  }
+  else {
+    
+  }
+}
+?>
+
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8">
