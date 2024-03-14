@@ -12,10 +12,9 @@
 
   <form action="validar.php" method="POST">
     <label for="n1">Nome: </label>
-    <input type="string" name="nome" id="txtnome"> <br><br>
+    <input type="string" name="nome" id="txtnome"> 
 
-    <input type="submit" value="Cadastrar"> <br><br>
-  </form>
+    <input type="submit" value="Cadastrar">
 
   <?php
 
@@ -31,6 +30,8 @@
     }
 
   ?>
+
+  </form> <br><br>
     
 </body>
 </html>
