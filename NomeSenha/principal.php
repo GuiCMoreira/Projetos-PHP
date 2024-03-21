@@ -21,31 +21,23 @@ logado();
       $logado = "";
     }
     echo "<h3> Seja bem-vindo $logado </h3>";
-    //$CookieInfo = session_get_cookie_params();
-    //echo var_dump($CookieInfo);
     echo "<h3>" . $hora() . "</h3>";
   ?>
 
   <?php 
-  if ($_SESSION["permissao"] == "adm") {
-    
+    menu();
   ?>
 
-    <h3>ADM</h3>
-
-  <?php
-  } else {
-
+  <?php 
+    if ($_SESSION["permissao"] == "adm") {
+      echo "<h3>Você é ADM</h3>";
+    } else {
+      echo "<h3>Você é USUARIO</h3>";
+    }
   ?>
 
-    <h3>USUARIO</h3>
-
-  <?php
-  }
-  ?>
-
-  <form action="sair.php">
-    <input type="submit" value="Sair">
+  <form action="logoff.php">
+    <input type="submit" value="logoff">
   </form>
 </body>
 </html>

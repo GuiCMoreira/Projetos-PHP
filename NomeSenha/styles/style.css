@@ -23,6 +23,18 @@ h3 {
   padding-top: 50px;
 }
 
+a {
+  color: #333;
+  text-align: center;
+  padding-top: 50px;
+}
+
+li {
+  color: #333;
+  text-align: center;
+  padding-top: 50px;
+}
+
 form {
   width: 300px;
   margin: 0 auto;
