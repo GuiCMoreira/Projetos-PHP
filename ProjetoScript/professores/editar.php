@@ -34,11 +34,17 @@ $prof = $response->fetch();
       <label>RG</label>
       <input type="text" name="RG" value="<?= $prof['RG'] ?>">
       <br>
-      <input type="text" name="Nascimento" value="<?= $prof['Nascimento'] ?>">
+      <label>Data de Nascimento</label>
+      <input type="date" name="Nascimento" value="<?= $prof['Nascimento'] ?>">
       <br>
+      <label>Salário</label>
       <input type="text" name="Salario" value="<?= $prof['Salario'] ?>">
       <br>
-      <input type="text" name="Sexo" value="<?= $prof['Sexo'] ?>">
+      <label>Gênero</label>
+      <select name="genero">
+        <option value="M" <?= $prof["Sexo"] == "M" ? 'selected' : '' ?>>Masculino</option>
+        <option value="F" <?= $prof["Sexo"] == "F" ? 'selected' : '' ?>>Feminino</option>
+      </select>
 
     </div>
 
