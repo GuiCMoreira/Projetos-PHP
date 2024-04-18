@@ -23,32 +23,40 @@ $prof = $response->fetch();
 </head>
 
 <body>
-  <form action="gravar.php">
+  <form action="gravar.php" method="post">
+
+    <div>
+      <label>Identificação</label>
+      <input type="text" name="cod_prof" readonly value="<?= $prof['Cod_prof']; ?>">
+    </div>
     <div>
       <label>Professor</label>
       <input type="text" name="Professor" value="<?= $prof['Nome'] ?>">
-      <br>
+    </div>
+    <div>
       <label>CPF</label>
       <input type="text" name="CPF" value="<?= $prof['CPF'] ?>">
-      <br>
+    </div>
+    <div>
       <label>RG</label>
       <input type="text" name="RG" value="<?= $prof['RG'] ?>">
-      <br>
+    </div>
+    <div>
       <label>Data de Nascimento</label>
       <input type="date" name="Nascimento" value="<?= $prof['Nascimento'] ?>">
-      <br>
+    </div>
+    <div>
       <label>Salário</label>
       <input type="text" name="Salario" value="<?= $prof['Salario'] ?>">
-      <br>
+    </div>
+    <div>
       <label>Gênero</label>
       <select name="genero">
         <option value="M" <?= $prof["Sexo"] == "M" ? 'selected' : '' ?>>Masculino</option>
         <option value="F" <?= $prof["Sexo"] == "F" ? 'selected' : '' ?>>Feminino</option>
       </select>
-
     </div>
-
-
+    <input type="submit" value="Salvar">
 
   </form>
 

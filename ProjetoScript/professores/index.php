@@ -7,7 +7,7 @@ $consulta = "SELECT * FROM professores order by nome";
 $resultado = $bd->query($consulta);
 ?>
 
-<html lang="pt-br">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
