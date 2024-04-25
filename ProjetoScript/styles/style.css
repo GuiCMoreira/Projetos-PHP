@@ -15,21 +15,29 @@ body {
   margin: 0 auto;
 }
 
-h1, h3 {
+h1,
+h3,
+th {
   color: #333;
 }
 
-input[type="text"], input[type="email"], input[type="date"] {
+input[type='text'],
+input[type='email'],
+input[type='date'],
+option,
+select {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
   border: 1px solid #ccc;
+  border-radius: 20px;
   box-sizing: border-box;
 }
 
-input[type="submit"] {
-  background-color: #4CAF50;
+input[type='submit'],
+button {
+  background-color: #4caf50;
   color: white;
   padding: 10px 16px; /* Reduzir o padding */
   font-size: 14px; /* Reduzir o tamanho da fonte */
@@ -37,9 +45,45 @@ input[type="submit"] {
   border: none;
   border-radius: 20px;
   cursor: pointer;
-  width: 500px;
+  width: 400px;
 }
 
-input[type="submit"]:hover {
+.btn_editar {
+  background-color: #4c89af;
+  color: white;
+  padding: 10px 16px; /* Reduzir o padding */
+  font-size: 14px; /* Reduzir o tamanho da fonte */
+  margin: 8px 8px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  width: 200px;
+}
+
+.btn_consultar {
+  background-color: #824caf;
+  color: white;
+  padding: 10px 16px; /* Reduzir o padding */
+  font-size: 14px; /* Reduzir o tamanho da fonte */
+  margin: 8px 8px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  width: 200px;
+}
+
+.btn_excluir {
+  background-color: #af4c4c;
+  color: white;
+  padding: 10px 16px; /* Reduzir o padding */
+  font-size: 14px; /* Reduzir o tamanho da fonte */
+  margin: 8px 8px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  width: 200px;
+}
+
+input[type='submit']:hover {
   background-color: #45a049;
 }

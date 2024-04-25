@@ -36,9 +36,9 @@ $resultado = $bd->query($consulta);
         echo $prof['Nome'];
         echo "</td>";
         echo "<td>";
-        echo "<a href='editar.php?id=" . $prof['Cod_prof'] . "'><button>Editar</button></a>";
-        echo "<a href='consultar.php?id=" . $prof['Cod_prof'] . "'><button>Consultar</button></a>";
-        echo "<a href='excluir.php?id=" . $prof['Cod_prof'] . "'><button>Excluir</button></a>";
+        echo "<a href='editar.php?id=" . $prof['Cod_prof'] . "'><button class='btn_editar'>Editar</button></a>";
+        echo "<a href='consultar.php?id=" . $prof['Cod_prof'] . "'><button class='btn_consultar'>Consultar</button></a>";
+        echo "<a href='excluir.php?id=" . $prof['Cod_prof'] . "'><button class='btn_excluir'>Excluir</button></a>";
         echo "</td>";
         echo "</tr>";
       }

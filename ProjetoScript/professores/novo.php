@@ -4,17 +4,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../styles/style.css">
   <title>Novo Professor</title>
 </head>
 
 <body>
   <a href="index.php"><button>Voltar</button></a>
 
-  <form action="gravar.php" method="post">
+  <form action="inserir.php" method="post">
 
     <div>
       <label>Identificação</label>
-      <input type="text" name="cod_prof" readonly value="">
+      <input type="text" name="cod_prof" value="">
     </div>
     <div>
       <label>Professor</label>
