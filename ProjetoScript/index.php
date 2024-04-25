@@ -1,11 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <title>Inicial</title>
 </head>
+
 <body>
-  
+  <form action="professores/index.php">
+    <input type="submit" value="Professores">
+  </form>
+  <form action="aluno/index.php">
+    <input type="submit" value="Alunos">
+  </form>
+  <form action="matricula/index.php">
+    <input type="submit" value="Matrícula">
+  </form>
 </body>
+
 </html>

@@ -7,15 +7,16 @@ $consulta = "SELECT * FROM professores order by nome";
 $resultado = $bd->query($consulta);
 ?>
 
-<html lang="en">
+<html lang="pt-br">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projeto Script</title>
+  <title>Professores</title>
 </head>
 
 <body>
+  <a href="../index.php"><button>Voltar</button></a>
 
   <a href="novo.php"><button>Novo Professor</button></a>
 
