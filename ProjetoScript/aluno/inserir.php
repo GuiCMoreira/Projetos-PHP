@@ -28,7 +28,7 @@ try {
   $bd = null;
   $erro = erros($e->getMessage());
   header("location:novo.php?id=$ra& "
-    . " nome=$nome&rg=$rg&cpf=$cpf&salario=$salario&nascimento=$nascimento&erro=$erro");
+    . " nome=$nome&rg=$rg&cpf=$cpf&nascimento=$nascimento&genero=$genero&erro=$erro");
   die();
 }
 

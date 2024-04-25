@@ -107,5 +107,11 @@ button {
 }
 
 input[type='submit']:hover {
-  background-color: #45a049;
+transition: 0.8s;
+  background-color: #2d6930;
+}
+
+.btn_voltar:hover {
+transition: 0.8s;
+  background-color: #373737;
 }
