@@ -17,7 +17,7 @@ $resultado = $bd->query($consulta);
 </head>
 
 <body>
-  <a href="../index.php"><button>Voltar</button></a>
+  <a href="../index.php"><button class="btn_voltar">Voltar</button></a>
 
   <a href="novo.php"><button>Novo Professor</button></a>
 

@@ -24,9 +24,7 @@ $prof = $response->fetch();
 </head>
 
 <body>
-  <form action="index.php">
-    <input type="submit" value="Voltar">
-  </form>
+  <a href="index.php"><button class="btn_voltar">Voltar</button></a>
   <form action="gravar.php" method="post">
 
     <div>

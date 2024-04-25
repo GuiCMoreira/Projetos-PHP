@@ -84,6 +84,18 @@ button {
   width: 200px;
 }
 
+.btn_voltar {
+  background-color: #787878;
+  color: white;
+  padding: 10px 16px; /* Reduzir o padding */
+  font-size: 14px; /* Reduzir o tamanho da fonte */
+  margin: 8px 8px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  width: 80px;
+}
+
 input[type='submit']:hover {
   background-color: #45a049;
 }

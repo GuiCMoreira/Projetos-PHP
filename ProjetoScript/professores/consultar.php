@@ -24,8 +24,8 @@ $prof = $response->fetch();
 </head>
 
 <body>
-  <form action="index.php">
-    <input type="submit" value="Voltar">
+  <a href="index.php"><button class="btn_voltar">Voltar</button></a>
+  <form action="">
     <div>
       <h3>Identificação: </h3>
       <p><?= $prof['Cod_prof']; ?></p>
@@ -54,6 +54,7 @@ $prof = $response->fetch();
       <h3>Gênero: </h3>
       <p><?= $prof["Sexo"] == "M" ? 'Masculino' : 'Feminino' ?></p>
     </div>
+  </form>
 
 </body>
 

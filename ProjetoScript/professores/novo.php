@@ -1,4 +1,16 @@
 <!DOCTYPE html>
+
+<?php
+$codigo = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_SPECIAL_CHARS);
+$nome = filter_input(INPUT_GET, 'nome', FILTER_SANITIZE_SPECIAL_CHARS);
+$cpf = filter_input(INPUT_GET, 'cpf', FILTER_SANITIZE_SPECIAL_CHARS);
+$rg = filter_input(INPUT_GET, 'rg', FILTER_SANITIZE_SPECIAL_CHARS);
+$nascimento = filter_input(INPUT_GET, 'nascimento', FILTER_SANITIZE_SPECIAL_CHARS);
+$salario = filter_input(INPUT_GET, 'salario', FILTER_SANITIZE_NUMBER_INT);
+$genero = filter_input(INPUT_GET, 'genero', FILTER_SANITIZE_SPECIAL_CHARS);
+$erro = filter_input(INPUT_GET, 'erro', FILTER_SANITIZE_SPECIAL_CHARS);
+?>
+
 <html lang="pt-br">
 
 <head>
@@ -9,7 +21,7 @@
 </head>
 
 <body>
-  <a href="index.php"><button>Voltar</button></a>
+  <a href="index.php"><button class="btn_voltar">Voltar</button></a>
 
   <form action="inserir.php" method="post">
 
