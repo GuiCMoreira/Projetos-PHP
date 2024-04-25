@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 
 <?php
-$codigo = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_SPECIAL_CHARS);
+$cod_prof = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_SPECIAL_CHARS);
 $nome = filter_input(INPUT_GET, 'nome', FILTER_SANITIZE_SPECIAL_CHARS);
 $cpf = filter_input(INPUT_GET, 'cpf', FILTER_SANITIZE_SPECIAL_CHARS);
 $rg = filter_input(INPUT_GET, 'rg', FILTER_SANITIZE_SPECIAL_CHARS);
@@ -21,33 +21,39 @@ $erro = filter_input(INPUT_GET, 'erro', FILTER_SANITIZE_SPECIAL_CHARS);
 </head>
 
 <body>
+
+  <?php
+  echo "<p>$erro</p>";
+  ?>
+
   <a href="index.php"><button class="btn_voltar">Voltar</button></a>
+
 
   <form action="inserir.php" method="post">
 
     <div>
       <label>Identificação</label>
-      <input type="text" name="cod_prof" value="">
+      <input type="text" name="cod_prof" value="<?= $cod_prof ?>">
     </div>
     <div>
       <label>Professor</label>
-      <input type="text" name="Professor" value="">
+      <input type="text" name="Professor" value="<?= $nome ?>">
     </div>
     <div>
       <label>CPF</label>
-      <input type="text" name="CPF" value="">
+      <input type="text" name="CPF" value="<?= $cpf ?>">
     </div>
     <div>
       <label>RG</label>
-      <input type="text" name="RG" value="">
+      <input type="text" name="RG" value="<?= $rg ?>">
     </div>
     <div>
       <label>Data de Nascimento</label>
-      <input type="date" name="Nascimento" value="">
+      <input type="date" name="Nascimento" value="<?= $nascimento ?>">
     </div>
     <div>
       <label>Salário</label>
-      <input type="text" name="Salario" value="">
+      <input type="text" name="Salario" value="<?= $salario ?>">
     </div>
     <div>
       <label>Gênero</label>
@@ -59,6 +65,7 @@ $erro = filter_input(INPUT_GET, 'erro', FILTER_SANITIZE_SPECIAL_CHARS);
     <input type="submit" value="Salvar">
 
   </form>
+
 
 </body>
 

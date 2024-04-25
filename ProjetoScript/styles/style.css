@@ -96,6 +96,16 @@ button {
   width: 80px;
 }
 
+.box_error {
+  background-color: #f44336;
+  color: white;
+  padding: 10px 16px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 20px;
+  width: auto;
+}
+
 input[type='submit']:hover {
   background-color: #45a049;
 }

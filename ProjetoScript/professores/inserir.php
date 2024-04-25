@@ -15,11 +15,22 @@ $sql = " INSERT INTO professores"
   . " VALUES ('$cod_prof', '$nome', '$cpf', '$rg', '$nascimento', $salario, '$genero')";
 
 $bd->beginTransaction();
-$i = $bd->exec($sql);
-if ($i == 1) {
-  $bd->commit();
-} else {
+
+try {
+  $i = $bd->exec($sql);
+
+  if ($i != 1) {
+    $bd->rollBack();
+  } else {
+    $bd->commit();
+  }
+} catch (PDOException $e) {
   $bd->rollBack();
+  $bd = null;
+  $erro = erros($e->getMessage());
+  header("location:novo.php?id=$cod_prof& "
+    . " nome=$nome&rg=$rg&cpf=$cpf&salario=$salario&nascimento=$nascimento&erro=$erro");
+  die();
 }
 
 $bd = null;

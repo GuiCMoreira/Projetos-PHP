@@ -10,4 +10,13 @@ function conectar()
   return $connection;
 }
 
+function erros($e)
+{
+  if (str_contains($e, "PRIMARY")) {
+    return "O código de identificação já está cadastrado";
+  } else {
+    return $e;
+  }
+}
+
 ?>
