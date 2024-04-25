@@ -15,8 +15,8 @@
   <form action="aluno/index.php">
     <input type="submit" value="Alunos">
   </form>
-  <form action="matricula/index.php">
-    <input type="submit" value="Matrícula">
+  <form action="disciplina/index.php">
+    <input type="submit" value="Disciplinas">
   </form>
 </body>
 
