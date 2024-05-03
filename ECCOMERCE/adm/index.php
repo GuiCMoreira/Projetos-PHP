@@ -9,6 +9,7 @@
 
 <body>
     <a href="produtos/produto.php"><button>Produtos</button></a>
+    <a href="categorias/categoria.php"><button>Categorias</button></a>
 </body>
 
 </html>
