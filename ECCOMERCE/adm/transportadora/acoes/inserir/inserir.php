@@ -9,6 +9,7 @@ $estado_trans = filter_input(INPUT_POST, 'estado_trans', FILTER_SANITIZE_SPECIAL
 $cep_trans = filter_input(INPUT_POST, 'cep_trans', FILTER_SANITIZE_SPECIAL_CHARS);
 
 include_once "../../../../script/banco.php";
+include_once "../../../../script/erros.php";
 $bd = conectar();
 
 $sql = " INSERT INTO transportadora"
@@ -29,7 +30,7 @@ try {
 } catch (PDOException $e) {
   $bd->rollBack();
   $bd = null;
-  $erro = erros($e->getMessage());
+  $erro = erro_cpf_cnpj($e->getMessage());
   header("location:novo.php?cpf_cnpj_trans=$cpf_cnpj_trans& "
     . " nome_trans=$nome_trans&numero_trans=$numero_trans&endereco_trans=$endereco_trans&cidade_trans=$cidade_trans&bairro_trans=$bairro_trans&estado_trans=$estado_trans&cep_trans=$cep_trans&erro=$erro");
   die();
