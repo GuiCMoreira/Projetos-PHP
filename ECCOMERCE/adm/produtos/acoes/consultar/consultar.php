@@ -2,15 +2,22 @@
 include_once '../../../../script/banco.php';
 $bd = conectar();
 $id = filter_input(INPUT_GET, 'codigo_prod', FILTER_SANITIZE_STRING);
-$select = "SELECT * FROM produto where codigo_prod = '$id'";
-$response = $bd->query($select);
 
-if ($response->rowCount() == 0) {
+$select = "SELECT * FROM produto where codigo_prod = :id";
+$stmt = $bd->prepare($select);
+$stmt->execute([':id' => $id]);
+$produto = $stmt->fetch();
+
+$selectimg = "SELECT * FROM imagem where codigo_prod = :id";
+$stmt = $bd->prepare($selectimg);
+$stmt->execute([':id' => $id]);
+$imagem = $stmt->fetch();
+
+if ($produto === false && $imagem === false) {
   $bd = null;
   header("location:index.php");
   die();
 }
-$produto = $response->fetch();
 ?>
 
 <!DOCTYPE html>
@@ -61,6 +68,10 @@ $produto = $response->fetch();
     <div>
       <h3>ID categoria: </h3>
       <p><?= $produto["id_categoria"] ?></p>
+    </div>
+    <div>
+      <h3>Imagem: </h3>
+      <img src="<?= $imagem["nome_arquivo"] ?>" alt="Imagem">
     </div>
   </form>
 
