@@ -8,7 +8,7 @@
 </head>
 
 <body>
-  <a href="adm/index.php"><button>ADM</button></a>
+ 
 </body>
 
 </html>

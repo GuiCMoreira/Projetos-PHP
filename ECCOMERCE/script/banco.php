@@ -10,12 +10,4 @@ function conectar()
     return $connection;
 }
 
-function erros($e)
-{
-    if (str_contains($e, "PRIMARY")) {
-        return "O código de ID já está cadastrado";
-    }
-    return $e;
-}
-
 ?>

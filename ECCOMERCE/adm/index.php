@@ -10,6 +10,8 @@
 <body>
     <a href="produtos/produto.php"><button>Produtos</button></a>
     <a href="categorias/categoria.php"><button>Categorias</button></a>
+    <a href="vendedor/vendedor.php"><button>Vendedores</button></a>
+    <a href="transportadora/transportadora.php"><button>Transportadores</button></a>
 </body>
 
 </html>
