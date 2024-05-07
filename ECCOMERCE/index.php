@@ -1,5 +1,12 @@
+<?php
+include_once 'script/banco.php';
+$bd = conectar();
+$select = "SELECT p.*, i.nome_arquivo FROM produto p INNER JOIN imagem i on p.codigo_prod = i.codigo_prod order by nome_pro";
+$response = $bd->query($select);
+?>
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
   <meta charset="UTF-8">
@@ -12,7 +19,9 @@
   <header>
     <div class="Header">
       <div class="Logo">
-        <img src="stylesheet/assets/logo.svg" alt="Ecobazar Logo">
+        <a href="adm/index.php">
+          <img src="stylesheet/assets/logo.svg" alt="Ecobazar Logo">
+        </a>
       </div>
       <nav class="Menu">
         <ul>
@@ -26,33 +35,31 @@
   </header>
 
   <main>
-    <div class="Banner">
-      <img src="stylesheet/assets/banner.svg" alt="Ecobazar Banner">
-    </div>
 
     <section class="Products">
       <h2>Nossos Produtos</h2>
       <div class="Product-grid">
-        <div class="Product">
-          <img src="product1.jpg" alt="Product 1">
-          <h3>Produto 1</h3>
-          <p>Descrição do Produto 1</p>
-          <button>Comprar</button>
-        </div>
-        <div class="Product">
-          <img src="product2.jpg" alt="Product 2">
-          <h3>Produto 2</h3>
-          <p>Descrição do Produto 2</p>
-          <button>Comprar</button>
-        </div>
-        <div class="Product">
-          <img src="product3.jpg" alt="Product 3">
-          <h3>Produto 3</h3>
-          <p>Descrição do Produto 3</p>
-          <button>Comprar</button>
-        </div>
+        <?php
+        while ($produtos = $response->fetch()) {
+
+          echo "<div class='Product'>";
+          echo "<img src=" . '$produtos["nome_arquivo"]' . " alt=''>";
+          echo $produtos["nome_pro"];
+          echo "<br>";
+          echo " <a href='usuario/comprar.php?codigo_prod=" . $produtos['codigo_prod'] . "'><button>Comprar Agora</button></a>";
+          echo "<br>";
+          echo " <a href='usuario/adicionarCarrinho.php?codigo_prod=" . $produtos['codigo_prod'] . "'><button>Adicionar ao Carrinho</button></a>";
+          echo "</div>";
+        }
+        $response = null;
+        $bd = null;
+        ?>
       </div>
     </section>
+
+    <div class="Banner">
+      <img src="stylesheet/assets/banner.svg" alt="Ecobazar Banner">
+    </div>
   </main>
 
   <footer>
