@@ -43,7 +43,7 @@ $response = $bd->query($select);
         while ($produtos = $response->fetch()) {
 
           echo "<div class='Product'>";
-          echo "<img src=" . '$produtos["nome_arquivo"]' . " alt=''>";
+          echo "<img src='" . $produtos["nome_arquivo"] . "' alt=''>";
           echo $produtos["nome_pro"];
           echo "<br>";
           echo " <a href='usuario/comprar.php?codigo_prod=" . $produtos['codigo_prod'] . "'><button>Comprar Agora</button></a>";

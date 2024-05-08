@@ -9,8 +9,7 @@
 
 <body>
     <a href="../index.php"><button>Voltar</button></a>
-    <br>
-    <br>
+    <br><br>
     <a href="produtos/produto.php"><button>Produtos</button></a>
     <a href="categorias/categoria.php"><button>Categorias</button></a>
     <a href="vendedor/vendedor.php"><button>Vendedores</button></a>

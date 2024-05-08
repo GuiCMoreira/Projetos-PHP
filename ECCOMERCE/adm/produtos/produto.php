@@ -16,6 +16,8 @@ $response = $bd->query($select);
 </head>
 
 <body>
+    <a href="../index.php"><button class="btn_voltar">Voltar</button></a>
+    <br>
     <table>
         <thead>
             <tr>
@@ -53,7 +55,6 @@ $response = $bd->query($select);
     </table>
     <br>
     <a href="acoes/inserir/novo.php"><button>Novo Produto</button></a>
-    <a href="../index.php"><button class="btn_voltar">Voltar</button></a>
 </body>
 
 </html>

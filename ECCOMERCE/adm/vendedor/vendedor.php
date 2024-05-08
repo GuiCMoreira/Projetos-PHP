@@ -16,6 +16,8 @@ $response = $bd->query($select);
 </head>
 
 <body>
+    <a href="../index.php"><button class="btn_voltar">Voltar</button></a>
+    <br>
     <table>
         <thead>
             <tr>
@@ -27,20 +29,20 @@ $response = $bd->query($select);
         <tbody>
             <?php
             while ($vendedores = $response->fetch()) {
-              echo "<tr>";
-              echo "<td>";
-              echo $vendedores["nome_vend"];
-              echo "</td>";
-              echo "<td>";
+                echo "<tr>";
+                echo "<td>";
+                echo $vendedores["nome_vend"];
+                echo "</td>";
+                echo "<td>";
 
-              echo " <a href='acoes/editar/editar.php?cpf_cnpj_vend=" . $vendedores['cpf_cnpj_vend'] . "'><button>Editar</button></a>";
+                echo " <a href='acoes/editar/editar.php?cpf_cnpj_vend=" . $vendedores['cpf_cnpj_vend'] . "'><button>Editar</button></a>";
 
-              echo " <a href='acoes/consultar/consultar.php?cpf_cnpj_vend=" . $vendedores['cpf_cnpj_vend'] . "'><button>Consultar</button></a>";
+                echo " <a href='acoes/consultar/consultar.php?cpf_cnpj_vend=" . $vendedores['cpf_cnpj_vend'] . "'><button>Consultar</button></a>";
 
-              echo " <a href='acoes/excluir/excluir.php?cpf_cnpj_vend=" . $vendedores['cpf_cnpj_vend'] . "'><button>Excluir</button></a>";
+                echo " <a href='acoes/excluir/excluir.php?cpf_cnpj_vend=" . $vendedores['cpf_cnpj_vend'] . "'><button>Excluir</button></a>";
 
-              echo "</td>";
-              echo "</tr>";
+                echo "</td>";
+                echo "</tr>";
             }
             $response = null;
             $bd = null;
@@ -49,7 +51,6 @@ $response = $bd->query($select);
     </table>
     <br>
     <a href="acoes/inserir/novo.php"><button>Cadastrar Vendedor</button></a>
-    <a href="../index.php"><button class="btn_voltar">Voltar</button></a>
 </body>
 
 </html>
