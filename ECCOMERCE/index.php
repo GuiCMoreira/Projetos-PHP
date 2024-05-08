@@ -1,7 +1,7 @@
 <?php
 include_once 'script/banco.php';
 $bd = conectar();
-$select = "SELECT p.*, i.nome_arquivo FROM produto p INNER JOIN imagem i on p.codigo_prod = i.codigo_prod order by nome_pro";
+$select = "SELECT p.*, i.nome_arquivo FROM produto p LEFT JOIN imagem i on p.codigo_prod = i.codigo_prod GROUP BY p.codigo_prod ORDER BY nome_pro";
 $response = $bd->query($select);
 ?>
 
