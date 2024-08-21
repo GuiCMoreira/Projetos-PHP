@@ -25,23 +25,6 @@ html {
   --btn-dark: #868585;
 }
 
-.dark {
-  --bg: #1f1f1f;
-  --h1: #62d2ff;
-  --h2: #ffffff;
-  --h3-border: #ba04e7;
-  --white: #575757;
-  --border: #575757;
-  --plus: #03eb22;
-  --minus: #ff1900;
-  --btn: #8a1dc9;
-  --li: #333;
-  --delete: #ff1900;
-  --txt-btn-delete: #fff;
-  --input: #cccccc;
-  --btn-dark: #fff;
-}
-
 body {
   background-color: var(--bg);
   display: flex;
